@@ -260,3 +260,26 @@ https://media.geeksforgeeks.org/wp-content/uploads/20200828184719/rain-300x300.p
 			filter: hue-rotate(360deg);
 	}
 }
+
+.audio-container {
+  position: absolute;
+  display: inline-block;
+	top: auto;
+}
+
+/* Стили для картинки */
+.audio-trigger {
+  display: block; /* Убираем лишние отступы под изображением */
+  max-width: 100%; /* Чтобы изображение не выходило за пределы контейнера */
+  height: auto; /* Сохраняем пропорции изображения */
+  cursor: pointer; /* Курсор в виде указателя */
+	position: fixed;
+	left: 93%;
+  bottom: 86%;
+  max-width: 3%;
+}
+
+/* Скрываем стандартный аудио-элемент */
+.audio-file {
+  display: none;
+}

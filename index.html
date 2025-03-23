@@ -41,6 +41,12 @@
 			<div class="header__wrapper">
 				<nav class="header__nav">
 					<a class="logo__link" href="#"><img class="logo" src="./img/8.png" alt="logo"></a>
+					<section class="audio-container">
+						<!-- Картинка, при нажатии на которую запускается музыка -->
+						<img src="./img/10.png" alt="Изображение" class="audio-trigger">
+						<!-- Аудио-элемент (скрытый) -->
+						<audio class="audio-file" src="./audio/KaerMorhen.mp3"></audio>
+					</section>
 				</nav>
 			</div>
 		</div>
@@ -148,5 +154,18 @@
 		</table>
   </section>
 	</main>
+		<script>
+			// Находим элементы
+const audioTrigger = document.querySelector('.audio-trigger');
+const audioFile = document.querySelector('.audio-file');
+// Добавляем обработчик события на клик по картинке
+audioTrigger.addEventListener('click', () => {
+  if (audioFile.paused) {
+    audioFile.play(); // Запускаем музыку, если она на паузе
+  } else {
+    audioFile.pause(); // Ставим на паузу, если музыка играет
+  }
+});
+		</script>
 </body>
 </html>
