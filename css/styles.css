@@ -33,6 +33,7 @@ a {
 }
 .witcher__title {
 	margin-bottom: 4vh;
+	font-size: clamp(12px, 3vw, 44px);
 }
 .witcher__subtitle {
 	margin-bottom: 3.5vh;
@@ -91,3 +92,4 @@ a {
 .about__item {
 	max-width: 197px;
 }
+

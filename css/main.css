@@ -125,23 +125,16 @@ a.button {
 
 .table  {
 	max-width: 100%;  
-	margin-left: auto;
   border-top: 7px solid var(--color-dark);
   border-collapse: collapse;
   text-align: center;
-  margin-bottom: -1px;
-	margin-right: 1000px;
   border: 2px solid #d1cab6;
-	font-size: 14px;
+	font-size: clamp(8px, 3vw, 14px);
   font-weight: 400;
 	line-height: 1.6;
-	justify-content: space-between;
 	background-color: var(--color-black);
 	color: #d1cab6;
 	font-family: var(--font-family-main);
-	top: 0;
-	left: 0;
-	width: 100%;
 	background-image: url(
 https://media.geeksforgeeks.org/wp-content/uploads/20200828184719/rain-300x300.png);
 	animation: rain 0.3s linear infinite;
@@ -158,8 +151,7 @@ https://media.geeksforgeeks.org/wp-content/uploads/20200828184719/rain-300x300.p
 	
 }
 
-.td {
-	max-width: 2200px;  
+.td { 
 	height: auto;
 	padding: 10px;
 	font-size: 14px;
@@ -184,10 +176,13 @@ ul {
 	float: left;
 	color: var(--color-black);
 	font-weight: 500;	
+	@media screen and (max-width:1365px) {
+    display: none;
+	}
 }
-
 .name--notes {
 	transition: transform 0.7s ease;
+	cursor: pointer;
 }
 
 .name--notes:hover {
