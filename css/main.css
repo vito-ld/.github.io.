@@ -192,7 +192,17 @@ ul {
 .img {
 	margin-bottom: 2%;
 	max-width: 10%;	
-	transition: transform 0.7s ease;
+	transition: transform 2s ease;
+	animation: moveUpDown 5s infinite ease-in-out;
+}
+
+@keyframes moveUpDown {
+	0%, 100% {
+		transform: translateY(0); /* Начальная и конечная позиция */
+	}
+	50% {
+		transform: translateY(-10px); /* Максимальное смещение вверх */
+	}
 }
 
 .img:hover {
